@@ -1,0 +1,25 @@
+<Application x:Class="NexusPOS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NexusPOS"
+             xmlns:views="clr-namespace:NexusPOS.Views"
+             xmlns:viewmodels="clr-namespace:NexusPOS.ViewModels">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Add references to other resource dictionaries here if needed -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- DataTemplates tell WPF which View to use for a given ViewModel -->
+            <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
+                <views:DashboardView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:POSViewModel}" >
+                <views:POSView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ProductViewModel}" >
+                <views:ProductView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
