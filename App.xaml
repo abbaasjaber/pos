@@ -7,10 +7,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- Add references to other resource dictionaries here if needed -->
+                <ResourceDictionary Source="/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/Styles/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <!-- DataTemplates tell WPF which View to use for a given ViewModel -->
             <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
                 <views:DashboardView />
             </DataTemplate>
