@@ -20,11 +20,12 @@ namespace NexusPOS.ViewModels
             ProductViewModel = new ProductViewModel();
             DashboardViewModel = new DashboardViewModel();
 
-            CurrentView = DashboardViewModel; // Set initial view
+            CurrentView = DashboardViewModel; // تنظیم صفحه پیش‌فرض
         }
 
+        // نام این متد تغییر کرد تا با Command داخل MainWindow هماهنگ شود
         [RelayCommand]
-        private void NavigateTo(string viewName)
+        private void ChangeView(string viewName)
         {
             CurrentView = viewName switch
             {
